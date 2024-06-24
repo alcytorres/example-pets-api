@@ -4,7 +4,8 @@ class PetsController < ApplicationController
     p "current_user"
     p current_user.id
     p "current_user"
-    @pets = Pet.where(user_id: current_user.id)
+    # @pets = Pet.where(user_id: current_user.id)
+    @pets = current_user.pets
     render template: "pets/index"
   end
 
